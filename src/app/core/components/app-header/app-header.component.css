@@ -1,0 +1,21 @@
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+header .title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header p {
+    font-weight: 300;
+    color: var(--gray);
+}
+
+header p strong {
+    color: var(--white);
+}

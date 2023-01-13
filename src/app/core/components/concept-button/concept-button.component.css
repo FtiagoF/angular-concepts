@@ -1,0 +1,26 @@
+button {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    
+    border: 3px solid var(--gray);
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: width 0.1s, height 0.1s;
+}
+
+button img {
+    width: 32px;
+    height: 32px;
+}
+
+button:hover {
+    width: calc(3.5rem + 5px);
+    height: calc(3.5rem + 5px);
+}
