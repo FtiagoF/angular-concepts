@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --white: #FAFAFA;
+    --gray: #999999;
+    --main-bg-color: #191919;
+    --second-bg-color: #252525;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    color: var(--white);
+    background-color: var(--main-bg-color);
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body, input, textarea, button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
