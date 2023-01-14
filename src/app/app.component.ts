@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConceptType } from './core/@types/concepts';
 
 import { CONCEPTS } from './core/constants/mock-concepts';
 
@@ -10,4 +11,9 @@ import { CONCEPTS } from './core/constants/mock-concepts';
 export class AppComponent {
   title = 'Angular Concepts';
   concepts = CONCEPTS;
+  selectedConcept = {};
+
+  onSelectConcept(concept: ConceptType) {
+    alert(concept.title)
+  }
 }

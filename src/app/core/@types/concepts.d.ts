@@ -3,4 +3,6 @@ export type ConceptType = {
     title: string;
     description: any;
     learnMore: string;
+    iconPath: string;
+    color: string;
 };

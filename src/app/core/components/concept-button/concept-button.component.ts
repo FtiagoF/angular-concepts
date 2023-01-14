@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ConceptType } from '../../@types/concepts';
 
 @Component({
@@ -8,5 +8,10 @@ import { ConceptType } from '../../@types/concepts';
 })
 export class ConceptButtonComponent {
     @Input() concept: ConceptType = <ConceptType>{};
+    @Output() selectedConcept = new EventEmitter();
 
+
+    onHandleSelectConcept() {
+      this.selectedConcept.emit()
+    }
 }

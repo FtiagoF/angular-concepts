@@ -2,7 +2,7 @@
 <div class="content">
   <app-header />
   <ul>
-    <li *ngFor="let concept of concepts"><app-concept-button [concept]="concept" /></li>
+    <li *ngFor="let concept of concepts"><app-concept-button (selectedConcept)="onSelectConcept(concept)" [concept]="concept" /></li>
     <li><app-concept-button /></li>
   </ul>
 </div>

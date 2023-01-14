@@ -1,6 +1,11 @@
-<button [title]="concept.title">
+<button 
+  [title]="concept.title ? concept.title : 'Add new concept'"
+  [ngStyle]="{'background': concept.color}"
+  [class]="concept.title ? '' : 'newConcept'"
+  (click)="onHandleSelectConcept()"
+  >
   <img
-    src="../../../../assets/plus-bold.png"
+    [src]="concept.iconPath ? concept.iconPath : 'assets/plus-bold.png'"
     alt="Component icon"
   />
 </button>
