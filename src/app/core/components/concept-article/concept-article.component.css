@@ -1,0 +1,48 @@
+article {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 8px;
+    background: var(--second-bg-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+article h2 {
+    font-size: 2rem;
+}
+
+.conceptDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conceptDetails p {
+    font-weight: 300;
+    color: var(--gray);
+    text-align: justify;
+}
+
+article button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    background: #C4473A;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 1.2rem;
+}
+
+article button {
+    color: var(--main-bg-color);
+}

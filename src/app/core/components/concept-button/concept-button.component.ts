@@ -12,6 +12,6 @@ export class ConceptButtonComponent {
 
 
     onHandleSelectConcept() {
-      this.selectedConcept.emit()
+      this.selectedConcept.emit();
     }
 }
