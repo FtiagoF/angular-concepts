@@ -1,7 +1,7 @@
 <article *ngIf="concept.id">
     <div class="concept-details">
         <h2>{{ concept.title }}</h2>
-        <p>{{ concept.description }}</p>
+        <p [innerHTML]="concept.description"></p>
     </div>
     <a [href]="concept.learnMore" target="_blank">
         Learn more

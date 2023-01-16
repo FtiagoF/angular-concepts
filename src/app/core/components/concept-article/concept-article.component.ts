@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ConceptType } from '../../@types/concepts';
+import { ConceptType } from '../../@types/concepts.d';
 
 @Component({
   selector: 'app-concept-article',

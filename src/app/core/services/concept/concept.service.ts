@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ConceptType } from '../../@types/concepts';
+import { ConceptType } from '../../@types/concepts.d';
 import { CONCEPTS } from '../../constants/mock-concepts';
 import { Observable, of } from 'rxjs'
 

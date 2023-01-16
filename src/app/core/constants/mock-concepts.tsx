@@ -1,10 +1,10 @@
-import { ConceptType } from "../@types/concepts";
+import { ConceptType } from "../@types/concepts.d";
 
 export const CONCEPTS: ConceptType[] = [
     {
         id: 1,
         title: `What's Angular`,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada fames. Iaculis at erat pellentesque adipiscing commodo.',
+        description: 'Briefly, Angular is a high-scalable and component-based framework built on TypeScript. It provides a large range of features to build your web app, such as routing, forms management, client-server communication and much, much more. Also, Angular provides tools to help develop, build, test and update your code.',
         learnMore: 'https://angular.io/guide/what-is-angular',
         iconPath: 'assets/angular-logo-bold.png',
         color: '#e74c3c'

@@ -3,7 +3,7 @@
     [title]="concept.title ? concept.title : 'Add new concept'"
     (mouseover)="hover = true"
     (mouseleave)="hover = false"
-    (focusout)="onTogglePopover = false"
+    (focusout)="isSelected = false"
     (click)="[togglePopover(), onHandleSelectConcept()]"
     [class.active-btn]="isSelected"
     [ngStyle]="{

@@ -22,11 +22,12 @@ button img {
     height: 32px;
 }
 
-button:hover .active-btn{
+button:hover, .active-btn{
     width: calc(3.5rem + 5px);
     height: calc(3.5rem + 5px);
     opacity: 1;
 }
+
 
 .new-concept {
     border: 3px solid var(--gray);
@@ -74,5 +75,4 @@ button:hover .active-btn{
 
     display: flex;
     flex-direction: column;
-    
   }

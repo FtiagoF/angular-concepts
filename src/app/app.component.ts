@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ConceptType } from './core/@types/concepts';
+import { ConceptType } from './core/@types/concepts.d';
 
 import { ConceptService } from './core/services/concept/concept.service';
 

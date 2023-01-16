@@ -1,7 +1,7 @@
 export type ConceptType = {
     id: number;
     title: string;
-    description: any;
+    description: string;
     learnMore: string;
     iconPath: string;
     color: string;
