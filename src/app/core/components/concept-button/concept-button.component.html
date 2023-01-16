@@ -1,11 +1,30 @@
-<button 
-  [title]="concept.title ? concept.title : 'Add new concept'"
-  [ngStyle]="{'background': concept.color}"
-  [class]="concept.title ? '' : 'newConcept'"
-  (click)="onHandleSelectConcept()"
+<div class="popover-wrapper" aria-label="open popover">
+  <button
+    [title]="concept.title ? concept.title : 'Add new concept'"
+    (mouseover)="hover = true"
+    (mouseleave)="hover = false"
+    (focusout)="onTogglePopover = false"
+    (click)="[togglePopover(), onHandleSelectConcept()]"
+    [class.active-btn]="isSelected"
+    [ngStyle]="{
+      background: concept.color,
+      'box-shadow': hover ? '0px 0px 20px -11px' + concept.color : ''
+    }"
+    [class]="concept.title ? '' : 'new-concept'"
   >
-  <img
-    [src]="concept.iconPath ? concept.iconPath : 'assets/plus-bold.png'"
-    alt="Component icon"
-  />
-</button>
+    <img
+      [src]="concept.iconPath ? concept.iconPath : 'assets/plus-bold.png'"
+      alt="Component icon"
+    />
+  </button>
+
+  <div 
+    class="popover-content"
+    aria-label="popover"
+    [class.active]="onTogglePopover"
+    *ngIf="isNewConceptButton"
+    >
+    <h3>Let's create</h3>
+    <app-new-concept-form />
+  </div>
+</div>

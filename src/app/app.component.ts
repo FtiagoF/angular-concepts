@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ConceptType } from './core/@types/concepts';
 
-import { CONCEPTS } from './core/constants/mock-concepts';
+import { ConceptService } from './core/services/concept/concept.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +9,21 @@ import { CONCEPTS } from './core/constants/mock-concepts';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private conceptService: ConceptService) {}
+
   title = 'Angular Concepts';
-  concepts = CONCEPTS;
-  selectedConcept = {};
+  concepts: ConceptType[] = [];
+  selectedConcept = <ConceptType>{};
+
+  getConcepts(): void {
+    this.conceptService.getConcepts().subscribe(concepts => this.concepts = concepts)
+  }
 
   onSelectConcept(concept: ConceptType) {
-    alert(concept.title)
+    this.selectedConcept = concept;
+  }
+
+  ngOnInit(): void {
+    this.getConcepts();
   }
 }

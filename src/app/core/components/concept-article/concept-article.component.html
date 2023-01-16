@@ -1,12 +1,12 @@
 <article *ngIf="concept.id">
-    <div class="conceptDetails">
+    <div class="concept-details">
         <h2>{{ concept.title }}</h2>
         <p>{{ concept.description }}</p>
     </div>
-    <button>
+    <a [href]="concept.learnMore" target="_blank">
         Learn more
         <span>
             <img src="assets/arrow-square-out-bold.png" width="16" height="16" alt="">
         </span>
-    </button>
+    </a>
 </article>

@@ -14,4 +14,11 @@ export class ConceptService {
     const concepts = of(CONCEPTS)
     return concepts;
   }
+
+  setNewConcept(newConcept: ConceptType): any {
+    const concepts = this.getConcepts().subscribe()
+
+    console.log(concepts);
+    
+  }
 }
