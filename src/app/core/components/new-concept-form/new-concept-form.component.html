@@ -1,8 +1,12 @@
-<form>
-  <label for="title">Title:</label><br>
-  <input type="text" id="title"/>
-  <label for="description">Description:</label><br>
-  <textarea name="description-textarea" id="description"></textarea>
-  <label for="URL">Learn more URL:</label><br>
-  <input type="text" id="URL"/>
+<form (ngSubmit)="onSubmit()" #conceptForm="ngForm">
+  <label for="title">Title*:</label><br>
+  <input type="text" [(ngModel)]="newConcept.title" required name="title-input" id="title"/>
+  
+  <label for="description">Description*:</label><br>
+  <textarea [(ngModel)]="newConcept.description" required name="description-textarea" id="description"></textarea>
+  
+  <label for="URL">Learn more URL*:</label><br>
+  <input [(ngModel)]="newConcept.learnMoreURL" type="text" required name="URL-input" id="URL"/>
+  
+  <button type="submit" (click)="test(conceptForm)" [disabled]="!conceptForm.form.valid">Insert</button>
 </form>

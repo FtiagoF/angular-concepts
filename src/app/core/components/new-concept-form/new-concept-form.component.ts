@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConceptType } from '../../@types/concepts';
 
 @Component({
   selector: 'app-new-concept-form',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-concept-form.component.css']
 })
 export class NewConceptFormComponent {
+  newConcept = <ConceptType>{};
 
+  onSubmit() {
+    console.log(this.newConcept);
+    
+  }
+
+  test(any: any) {
+    console.log(any);
+    
+  }
 }

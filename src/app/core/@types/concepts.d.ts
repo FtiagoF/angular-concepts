@@ -2,7 +2,7 @@ export type ConceptType = {
     id: number;
     title: string;
     description: string;
-    learnMore: string;
+    learnMoreURL: string;
     iconPath: string;
     color: string;
 };

@@ -14,7 +14,9 @@
   <main *ngIf="selectedConcept || isNewConceptButton">
     <app-concept-article *ngIf="selectedConcept" [concept]="selectedConcept"/>
     <div class="form-container" *ngIf="isNewConceptButton">
-      <app-new-concept-form />
+      <h2>Insert new concept</h2>
+      <app-new-concept-form>
+      </app-new-concept-form>
     </div>
   </main>
 </div>

@@ -22,11 +22,9 @@ export class AppComponent {
   onSelectConcept(concept: ConceptType|undefined) {
     this.isNewConceptButton = concept ? false : true
     this.selectedConcept = concept;
-    console.log(concept);
   }
 
   ngOnInit(): void {
     this.getConcepts();
-
   }
 }
