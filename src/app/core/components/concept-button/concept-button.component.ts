@@ -7,23 +7,13 @@ import { ConceptType } from '../../@types/concepts.d';
   styleUrls: ['./concept-button.component.css']
 })
 export class ConceptButtonComponent {
-    @Input() concept: ConceptType = <ConceptType>{};
-    @Output() selectedConcept = new EventEmitter();
+    @Input() concept = <ConceptType|undefined>undefined;
+    @Output() selectedConceptEvent = new EventEmitter();
     hover = false;
     isSelected = false
-    onTogglePopover = false;
-    isNewConceptButton = false;
 
-    ngOnInit(): void {
-      this.isNewConceptButton = this.concept.id ? false : true;
-    }
-
-    onHandleSelectConcept() {
-      this.selectedConcept.emit();
+    handleSelectConcept() {
+      this.selectedConceptEvent.emit();
       this.isSelected = true;
-    }
-
-    togglePopover() {
-      this.onTogglePopover = !this.onTogglePopover;
     }
 }

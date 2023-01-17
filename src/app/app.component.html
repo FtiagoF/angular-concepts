@@ -4,13 +4,17 @@
   <ul>
     <li *ngFor="let concept of concepts">
       <app-concept-button 
-        (selectedConcept)="onSelectConcept(concept)" 
+        (selectedConceptEvent)="onSelectConcept(concept)" 
         [concept]="concept" 
       />
     </li>
-    <li>
-      <app-concept-button />
-    </li>
+    <li><app-concept-button (selectedConceptEvent)="onSelectConcept(undefined)"/></li>
   </ul>
-  <app-concept-article [concept]="selectedConcept"/>
+
+  <main *ngIf="selectedConcept || isNewConceptButton">
+    <app-concept-article *ngIf="selectedConcept" [concept]="selectedConcept"/>
+    <div class="form-container" *ngIf="isNewConceptButton">
+      <app-new-concept-form />
+    </div>
+  </main>
 </div>

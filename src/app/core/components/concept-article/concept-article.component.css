@@ -1,8 +1,4 @@
 article {
-    width: 100%;
-    padding: 2rem;
-    border-radius: 8px;
-    background: var(--second-bg-color);
 
     display: flex;
     justify-content: center;
